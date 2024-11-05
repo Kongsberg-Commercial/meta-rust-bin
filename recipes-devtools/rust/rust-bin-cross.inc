@@ -16,7 +16,7 @@ PN = "rust-bin-cross-${TARGET_ARCH}"
 # Extra architectures to install standard library for. Must match one of the
 # standard rust targets. The standard library for the default host and target
 # will be installed automatically.
-EXTRA_RUST_TARGETS ?= ""
+EXTRA_RUST_TARGETS ?= "wasm32-unknown-unknown"
 
 RUST_BUILD_TARGET = "${@rust_target(d, 'BUILD')}"
 RUST_TARGET_TARGET = "${@rust_target(d, 'TARGET')}"
